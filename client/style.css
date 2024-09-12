@@ -1,0 +1,66 @@
+
+html{
+
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(254, 254, 254);
+
+}
+.container{
+    width: 100%;
+
+}
+img{height: 300px;}
+.card{
+    width: 400px;
+    height: 600px;
+    display:flex;
+    padding-block: 40px ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+    
+
+}
+p{
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    margin: 0.2em;
+}
+
+.checkout-btn{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color:#00aef0;
+    font-size: 24px;
+    font-weight: 900;
+    color:white;
+    border: 0;
+}
+.checkout-btn:hover{    
+    cursor: pointer;
+    background-color:#1695c7;
+}
+.payment-checker{
+    width: 80%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    background-color:rgb(255, 98, 0);
+    font-size: 24px;
+    font-weight: 900;
+    color:white;
+}
+.payment-checker:hover{    
+    cursor: pointer;
+    background-color:rgb(205, 78, 0);
+}
