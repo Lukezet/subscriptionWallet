@@ -15,37 +15,44 @@ app.get("/",(req, res) => {
 	res.send("soy el server :)");
 });
 
-app.post("/create_preference",async(req,res)=>{
-    try{
+app.post("/create_preference", async (req, res) => {
+    try {
+        // Recibe el JSON con los datos de la orden
+        const { title, quantity, price } = req.body;
+
+        // Define el cuerpo de la preferencia de pago
         const body = {
-            items:[{
-                title: req.body.title,
-                quantity: Number(req.body.quantity),
-                unit_price: Number(req.body.price),
-                currency_id:"ARS"
+            items: [{
+                title: title,
+                quantity: Number(quantity),
+                unit_price: Number(price),
+                currency_id: "ARS"
             }],
             back_urls: {
-                success:"https://lukezet.github.io/",
-                failure:"https://www.youtube.com/watch?v=vEXwN9-tKcs&t=1652s",
-                pending:"https://chatgpt.com/c/5a7d8125-6a2e-4463-bc23-941005c076f1"
+                success: "https://tu-pagina-exito.com/",
+                failure: "https://tu-pagina-error.com/",
+                pending: "https://tu-pagina-pendiente.com/"
             },
-            auto_return:"approved",
-            notification_url:"https://510e-181-93-74-134.ngrok-free.app/webhook"
+            auto_return: "approved",
+            notification_url: "https://9ab4-168-226-219-57.ngrok-free.app/webhook" // Cambia esto con tu URL real
         };
+
+        // Crea la preferencia usando MercadoPago SDK
         const preference = new Preference(client);
-        const result = await preference.create({body});
+        const result = await preference.create({ body });
+
+        // Devuelve el ID de la preferencia para que puedas generar el botón de pago
         res.json({
-            id:result.id,
-        })
-        console.log("Orden de Compra creada:  ",result.items)
-    }
-    catch(error){
-        console.log(error)
+            id: result.id
+        });
+        console.log("Orden de Compra creada:", result.items);
+    } catch (error) {
+        console.log(error);
         res.status(500).json({
-            error:"Error al crear la preferencia"
-        })
+            error: "Error al crear la preferencia"
+        });
     }
-})
+});
 app.post("/webhook",async function(req,res){
     console.log(req.query)
     const paymentId = req.query.id;
