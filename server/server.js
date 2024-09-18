@@ -34,7 +34,7 @@ app.post("/create_preference", async (req, res) => {
                 pending: "https://tu-pagina-pendiente.com/"
             },
             auto_return: "approved",
-            notification_url: "https://9ab4-168-226-219-57.ngrok-free.app/webhook" // Cambia esto con tu URL real
+            notification_url: "https://9109-200-5-122-254.ngrok-free.app/webhook" // Cambia esto con tu URL real
         };
 
         // Crea la preferencia usando MercadoPago SDK
