@@ -1,0 +1,3 @@
+window.env = {
+  MP_PUBLIC_KEY: "APP_USR-0a5b622d-6362-4814-95c9-157d85aa2b20"
+};
