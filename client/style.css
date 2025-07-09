@@ -4,7 +4,7 @@ html{
     display:flex;
     justify-content: center;
     align-items: center;
-    background-color: rgb(254, 254, 254);
+    background-color: #3483fa;
 
 }
 body {
@@ -18,56 +18,58 @@ body {
       width: 100%;
     }
 
-    h2 {
-      color: #FFFF;
-      margin-top: 40px;
-      font-weight: 700;
-    }
+h2 {
+    color: #FFFF;
+    margin-top: 40px;
+    font-weight: 700;
+}
 
-    #payment-form {
-      max-width: 400px;
-      width: 80%;
-      background-color: #fff;
-      padding: 12px;
-      border-radius: 50px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
-      margin-bottom: 16px;
-      border: 2px solid #3483fa;
-    }
+#payment-form {
+    max-width: 400px;
+    width: 80%;
+    background-color: #fff;
+    padding: 12px;
+    border-radius: 50px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+    margin-bottom: 16px;
+    border: 2px solid #3483fa;
+}
 
-    #card-brick {
-      margin-top: 20px;
-    }
-    footer{
-        display: grid;
-        place-items: center;
-        text-align: center;
-    }
-    img{
-        width: 120px;
-        height: 30px;
-        margin: 10px;
-    }
-    button {
-      margin: 20px auto;
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: #3483fa;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.2s ease;
-      display: block;
-    }
+#card-brick {
+    margin-top: 20px;
+}
+footer{
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+img{
+    width: 120px;
+    height: 30px;
+    margin: 10px;
+}
+button {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3483fa;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: block;
+}
 
-    button:hover {
-      background-color: #2968c8;
-    }
-    p{
-        font-size: 10px;
-        width: 300px;
-    }
+button:hover {
+    background-color: #2968c8;
+}
+p{
+    font-size: 12px;
+    width: 300px;
+    font-weight: 600;
+    color: white;
+}
 .container{
     width: 100%;
 
@@ -84,13 +86,6 @@ body {
     
 
 }
-p{
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    margin: 0.2em;
-}
-
 .checkout-btn{
     width: 80%;
     height: 60px;
